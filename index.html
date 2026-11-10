@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Fátima Safie · One Page</title>
+<meta name="description" content="Fátima Safie · Brand, Product Design and Marketing">
+</head>
+<body>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one scannable column — thesis + at-a-glance, proof strip, 4 work tiles, compact career list, contact band */
+:root{
+  --bg:#FFFFFF; --surface:#F3F4F9; --fg:#0B1440; --muted:#4A5275; --line:#E3E6F0;
+  --accent:#1C1CF0; --on-accent:#FFFFFF; --mark:#D9DBFF; --band:#0B1440; --band-fg:#FFFFFF; --band-muted:#B4BAE0; --band-line:#2A3570;
+  --display:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#060A26; --surface:#0E1438; --fg:#EEF0FF; --muted:#A9B0D6; --line:#1E2756;
+  --accent:#6E6EFF; --on-accent:#060A26; --mark:#1C2268; --band:#0E1438; --band-fg:#EEF0FF; --band-muted:#A9B0D6; --band-line:#26306A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#060A26; --surface:#0E1438; --fg:#EEF0FF; --muted:#A9B0D6; --line:#1E2756;
+  --accent:#6E6EFF; --on-accent:#060A26; --mark:#1C2268; --band:#0E1438; --band-fg:#EEF0FF; --band-muted:#A9B0D6; --band-line:#26306A; color-scheme:dark}
+:root{--line-strong:#C6CBDD;--lime:var(--accent);--on-lime:var(--on-accent)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--line-strong:#2E3872}}
+:root[data-theme="dark"]{--line-strong:#2E3872}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+html:not([lang="es"]) .es, html[lang="es"] .en{display:none!important}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+a{color:inherit}
+.k{font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:22px}
+.name{font:700 18px/1 var(--display);letter-spacing:-.01em}
+.tools{display:flex;gap:8px}
+.chip{font:600 12px/1 var(--body);letter-spacing:.08em;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;padding:9px 13px;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:end;padding-block:40px 44px}
+.hero h1{font-size:clamp(40px,6.2vw,72px);line-height:.98;letter-spacing:-.035em;font-weight:800}
+.hero h1 .and{color:var(--accent)}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:34em;margin:22px 0 0}
+.seek{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--mark);color:var(--fg);border-radius:999px;padding:10px 16px;font-weight:600;font-size:15px}
+.seek i{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 20px;font:600 14px/1 var(--body);text-decoration:none;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{border-color:var(--accent)}
+.btn svg{width:16px;height:16px}
+.glance{border:1px solid var(--line);border-radius:18px;padding:6px 22px;background:var(--bg)}
+.glance div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding-block:14px;border-top:1px solid var(--line)}
+.glance div:first-child{border-top:0}
+.glance dt{font:600 11px/1.6 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.glance dd{margin:0;font-weight:500;font-size:15px}
+
+/* proof */
+.proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof div{padding:22px 20px 22px 0}
+.proof div+div{padding-left:20px;border-left:1px solid var(--line)}
+.proof b{display:block;font:800 34px/1 var(--display);letter-spacing:-.03em;color:var(--accent);font-variant-numeric:tabular-nums}
+.proof span{display:block;margin-top:8px;font-size:14px;color:var(--muted);line-height:1.4}
+
+/* sections */
+section.s{padding-block:56px 8px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.sh h2{font-size:clamp(26px,3vw,34px);letter-spacing:-.02em;font-weight:700}
+.sh a{font-weight:600;font-size:14px;color:var(--accent);text-decoration:none}
+
+/* work */
+.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tile{background:var(--surface);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.tile figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--line)}
+.tile img{width:100%;height:100%;object-fit:cover;object-position:0% 30%;display:block}
+.tile .b{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tile h3{font-size:19px;letter-spacing:-.01em;font-weight:700}
+.tile p{margin:0;font-size:14px;color:var(--muted);line-height:1.45}
+.tile ul{list-style:none;margin:auto 0 0;padding:10px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.tile li{font-size:12px;font-weight:600;background:var(--bg);border-radius:999px;padding:5px 10px}
+
+/* career */
+.career{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.career li{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,1.3fr);gap:24px;padding-block:20px;border-bottom:1px solid var(--line);align-items:baseline}
+.when{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.role b{display:block;font:700 17px/1.3 var(--display)}
+.role span{font-size:14px;color:var(--muted)}
+.career p{margin:0;font-size:15px}
+.career li.small{grid-template-columns:170px minmax(0,1fr)}
+.extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.box{border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.box h3{font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.box p{margin:0;font-size:15px}
+.box p+p{margin-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+
+/* contact band */
+.band{background:var(--band);color:var(--band-fg);margin-top:64px}
+.band .wrap{padding-block:56px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.band h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.03em;line-height:1.02;font-weight:800}
+.band p{color:var(--band-muted);margin:14px 0 0;max-width:30em}
+.cl{display:flex;flex-direction:column;gap:10px}
+.cl .row{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--band-line);border-radius:14px;padding:14px 16px}
+.cl .row small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--band-muted)}
+.cl .row strong{font-weight:600;font-size:15px;user-select:all;overflow-wrap:anywhere}
+.cl .act{flex:none;font:600 13px/1 var(--body);background:var(--band-fg);color:var(--band);border:0;border-radius:999px;padding:10px 14px;cursor:pointer;text-decoration:none}
+.foot{font-size:13px;color:var(--band-muted);padding-block:0 28px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-block:20px 36px}
+  .work{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .career li,.career li.small{grid-template-columns:1fr;gap:4px}
+  .band .wrap{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .proof{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proof div:nth-child(3){padding-left:0;border-left:0}
+  .proof div:nth-child(n+3){border-top:1px solid var(--line)}
+  .work,.extras{grid-template-columns:1fr}
+  .glance div{grid-template-columns:84px minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:no-preference){.tile img{transition:transform .5s ease}.tile:hover img{transform:scale(1.03)}}
+/* discipline cards, same as the full portfolio */
+.rh-photo{position:relative;margin:0;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:var(--surface);box-shadow:0 30px 60px -40px rgba(11,20,64,.55)}
+.rh-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.rh-proof{padding-block:0!important}
+.rh-proof .wrap>div{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-radius:20px;background:var(--band);color:var(--band-fg);overflow:hidden}
+.rh-proof .rp{padding:22px 20px;border-left:1px solid var(--band-line)}
+.rh-proof .rp:first-child{border-left:0}
+.rh-proof .rp strong{display:block;font-family:var(--display);font-size:clamp(30px,3vw,44px);letter-spacing:-.04em;line-height:1}
+.rh-proof .rp span{display:block;font-size:13.5px;line-height:1.35;color:var(--band-muted);margin-top:8px}
+@media (max-width:1000px){
+.rh-work .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rh-proof .wrap>div{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rh-proof .rp:nth-child(4){border-left:0}
+.rh-proof .rp:nth-child(n+4){border-top:1px solid var(--band-line)}
+}
+@media (max-width:760px){
+.rh-hero .wrap{grid-template-columns:1fr}
+.rh-photo{max-width:320px;aspect-ratio:1/1;order:-1}
+.rh-facts{grid-template-columns:1fr}
+.rh-why .grid,.rh-do .grid{grid-template-columns:1fr}
+.rh-proof .wrap>div{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rh-proof .rp{border-left:0!important;border-top:1px solid var(--band-line)}
+.rh-proof .rp:nth-child(-n+2){border-top:0}
+.rh-career li{grid-template-columns:1fr;gap:4px}
+.rh-end .box{grid-template-columns:1fr}
+.rh-end .acts{justify-content:flex-start}
+}
+.rh-acc{display:flex;height:clamp(420px,42vw,560px);margin-top:clamp(26px,3vw,40px);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+.rh-p{position:relative;flex:1 1 0;min-width:0;overflow:hidden;text-decoration:none;color:var(--fg);border-left:1px solid var(--line-strong);display:flex;flex-direction:column;justify-content:space-between;padding:20px 22px 24px;transition:flex-grow .6s cubic-bezier(.22,1,.36,1),color .3s ease}
+.rh-p:last-child{border-right:1px solid var(--line-strong)}
+.rh-p .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .45s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+.rh-p .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,20,64,.35) 0%,rgba(11,20,64,0) 35%,rgba(11,20,64,.15) 55%,rgba(11,20,64,.82) 100%);opacity:0;transition:opacity .45s ease}
+.rh-p .tg,.rh-p .bt{position:relative;z-index:1}
+.rh-p .tg{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.02em;max-width:22ch}
+.rh-p .tg i{font-style:normal;color:var(--lime);font-size:12px}
+.rh-p strong{display:block;font-family:var(--display);font-weight:500;font-size:clamp(22px,2.1vw,32px);letter-spacing:-.025em;line-height:1.05;max-width:12ch}
+.rh-p .rs,.rh-p .go{display:block;max-height:0;opacity:0;overflow:hidden;transition:opacity .35s ease .1s,max-height .5s ease}
+.rh-p .rs{font-size:15px;line-height:1.45;max-width:36ch;margin-top:0}
+.rh-p .go{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.rh-p .go svg{width:14px;height:14px}
+.rh-p[aria-expanded="true"]{flex-grow:3;color:#fff}
+.rh-p[aria-expanded="true"] .bg{opacity:1;transform:none}
+.rh-p[aria-expanded="true"] .sh{opacity:1}
+.rh-p[aria-expanded="true"] .tg i{color:#fff}
+.rh-p[aria-expanded="true"] .rs{max-height:120px;opacity:.9;margin-top:10px}
+.rh-p[aria-expanded="true"] .go{max-height:40px;opacity:1;margin-top:14px}
+.rh-p[aria-expanded="true"] strong{max-width:18ch}
+.rh-p:focus-visible{outline:2px solid var(--lime);outline-offset:-2px}
+@media (max-width:760px){
+.rh-acc{flex-direction:column;height:auto;border-bottom:0}
+.rh-p{border-left:0;border-right:0!important;border-bottom:1px solid var(--line-strong);min-height:112px;flex:none;transition:min-height .5s cubic-bezier(.22,1,.36,1),color .3s ease}
+.rh-p[aria-expanded="true"]{min-height:380px}
+.rh-p strong{font-size:24px;max-width:none}
+}
+@media (prefers-reduced-motion:reduce){
+.rh-p,.rh-p *{transition:none!important}
+}
+/* card version of the disciplines strip */
+.rh-cards{display:flex;align-items:flex-end;gap:14px;height:clamp(440px,40vw,540px);border:0!important;margin-top:clamp(26px,3vw,40px)}
+.rh-cards .rh-p{position:relative;flex:1 1 0;min-width:0;height:82%;border:0!important;border-radius:22px;background:var(--bg);box-shadow:0 1px 0 var(--line),0 18px 40px -30px rgba(11,20,64,.35),inset 0 0 0 1px var(--line);color:var(--fg);padding:22px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:flex-grow .6s cubic-bezier(.22,1,.36,1),height .6s cubic-bezier(.22,1,.36,1),box-shadow .4s ease,transform .5s cubic-bezier(.22,1,.36,1)}
+.rh-cards .rh-p:hover{background:var(--bg)}
+.rh-cards .num{font-family:var(--display);font-weight:500;font-size:clamp(46px,4.6vw,68px);letter-spacing:-.04em;line-height:1;color:var(--mark);transition:opacity .3s ease}
+.rh-cards .ph{display:block;height:0;opacity:0;border-radius:14px;overflow:hidden;background:var(--surface);transition:height .6s cubic-bezier(.22,1,.36,1),opacity .4s ease}
+.rh-cards .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.rh-cards .ft{display:flex;flex-direction:column;gap:0}
+.rh-cards.rh-acc .rh-p .ic{flex:none;position:static;transform:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--surface);color:var(--lime);margin-bottom:12px}
+.rh-cards.rh-acc .rh-p .ic svg{width:18px;height:18px}
+.rh-cards strong{font-family:var(--display);font-weight:600;font-size:clamp(17px,1.4vw,20px);letter-spacing:-.02em;line-height:1.15;max-width:14ch;transition:font-size .4s ease}
+.rh-cards .tg,.rh-cards .rs,.rh-cards .go{display:block;max-height:0;opacity:0;overflow:hidden;transition:opacity .35s ease .12s,max-height .5s ease,margin .4s ease}
+.rh-cards .tg{font-size:13px;font-weight:600;letter-spacing:.01em;color:var(--lime)}
+.rh-cards .rs{font-size:14.5px;line-height:1.5;color:var(--muted);max-width:40ch}
+.rh-cards .go{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fg);display:flex;align-items:center;gap:8px}
+.rh-cards .go svg{width:14px;height:14px;transition:transform .2s ease}
+.rh-cards .rh-p[aria-expanded="true"]{flex-grow:2.4;height:100%;color:var(--fg);box-shadow:0 30px 60px -34px rgba(11,20,64,.45),inset 0 0 0 1px var(--line)}
+.rh-cards .rh-p[aria-expanded="true"] .num{position:absolute;opacity:0;pointer-events:none}
+.rh-cards .rh-p[aria-expanded="true"] .ph{height:46%;opacity:1}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .ic{opacity:1;transform:none}
+.rh-cards .rh-p[aria-expanded="true"] strong{font-size:clamp(24px,2.3vw,34px);max-width:16ch}
+.rh-cards .rh-p[aria-expanded="true"] .tg{max-height:40px;opacity:1;margin-top:10px}
+.rh-cards .rh-p[aria-expanded="true"] .rs{max-height:120px;opacity:1;margin-top:10px}
+.rh-cards .rh-p[aria-expanded="true"] .go{max-height:40px;opacity:1;margin-top:16px}
+.rh-cards .rh-p[aria-expanded="true"]:hover .go svg{transform:translateX(4px)}
+@media (max-width:760px){
+.rh-cards{flex-direction:column;align-items:stretch;height:auto;gap:10px}
+.rh-cards .rh-p{height:auto;min-height:0;flex:none;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:center}
+.rh-cards .num{font-size:36px}
+.rh-cards .ft{grid-column:2}
+.rh-cards.rh-acc .rh-p .ic{position:absolute;right:20px;top:24px;margin:0}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .ic{display:none}
+.rh-cards .rh-p[aria-expanded="true"]{height:auto;display:flex}
+.rh-cards .rh-p[aria-expanded="true"] .ph{height:200px;margin-bottom:16px}
+}
+.rh-p .ic{position:relative;z-index:1;flex:1;display:flex;align-items:center;justify-content:center;transition:opacity .3s ease,transform .5s cubic-bezier(.22,1,.36,1)}
+.rh-p .ic svg{width:clamp(56px,6vw,86px);height:clamp(56px,6vw,86px);color:var(--lime)}
+.rh-p[aria-expanded="true"] .ic{opacity:0;transform:scale(.85)}
+.rh-p .nm{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--lime);margin-bottom:8px}
+.rh-p[aria-expanded="true"] .nm{color:#fff;opacity:.85}
+.rh-p:not([aria-expanded="true"]):hover{background:var(--surface)}
+@media (max-width:760px){
+.rh-p .ic{position:absolute;right:20px;top:50%;transform:translateY(-50%)}
+.rh-p .ic svg{width:44px;height:44px}
+.rh-p[aria-expanded="true"] .ic{transform:translateY(-50%) scale(.85)}
+}
+.rh-cards.rh-acc{gap:16px;height:clamp(460px,42vw,560px);align-items:center}
+.rh-cards.rh-acc .rh-p{height:72%;flex:1 1 0;background:color-mix(in srgb,var(--surface) 55%,var(--bg));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--line) 70%,transparent);border-radius:18px;padding:24px;cursor:pointer;transition:flex-grow .65s cubic-bezier(.22,1,.36,1),height .65s cubic-bezier(.22,1,.36,1),background .4s ease,box-shadow .4s ease}
+.rh-cards.rh-acc .rh-p:hover{background:color-mix(in srgb,var(--surface) 85%,var(--bg))}
+.rh-cards.rh-acc .num{font-weight:400;font-size:clamp(52px,5vw,76px);letter-spacing:-.05em;color:color-mix(in srgb,var(--line-strong) 55%,transparent)}
+.rh-cards.rh-acc .rh-p .ic{width:30px;height:30px;border-radius:8px;background:color-mix(in srgb,var(--line) 80%,transparent);color:var(--fg);margin-bottom:14px}
+.rh-cards.rh-acc .rh-p .ic svg{width:16px;height:16px}
+.rh-cards.rh-acc strong{font-weight:400;font-size:clamp(17px,1.35vw,20px);letter-spacing:-.01em;line-height:1.2}
+.rh-cards.rh-acc .ph{position:absolute;left:0;right:0;top:0;height:0;border-radius:0;background:none;opacity:0;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%)}
+.rh-cards.rh-acc .ph img{filter:saturate(.8);opacity:.88}
+.rh-cards.rh-acc .tg{font-weight:500;font-size:12.5px;color:var(--muted)}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"]{flex-grow:2.3;height:100%;background:var(--bg);box-shadow:0 24px 60px -36px rgba(11,20,64,.28),inset 0 0 0 1px var(--line)}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .ph{height:48%;opacity:1}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .ft{position:relative;margin-top:auto}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] strong{font-weight:400;font-size:clamp(26px,2.5vw,38px);line-height:1.08;max-width:14ch}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .rs{font-size:14px;margin-top:14px}
+@media (max-width:760px){
+.rh-wh-r{max-width:none}
+.rh-cards.rh-acc{height:auto;align-items:stretch}
+.rh-cards.rh-acc .rh-p{height:auto!important;min-height:88px;padding:18px 20px;flex:none}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"]{padding-top:210px;display:flex}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .ph{height:230px;margin:0}
+}
+.rh-cards.rh-acc .pl{display:block;max-height:0;opacity:0;overflow:hidden;transition:opacity .35s ease .12s,max-height .5s ease,margin .4s ease}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .pl{max-height:220px;opacity:1;margin-top:14px}
+.rh-cards.rh-acc .pl a{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:10px 2px;border-top:1px solid var(--line);text-decoration:none;color:var(--fg);font-size:14px}
+.rh-cards.rh-acc .pl a:last-child{border-bottom:1px solid var(--line)}
+.rh-cards.rh-acc .pl b{font-weight:600;white-space:nowrap}
+.rh-cards.rh-acc .pl span{color:var(--muted);font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rh-cards.rh-acc .pl svg{width:14px;height:14px;color:var(--lime);transition:transform .2s ease}
+.rh-cards.rh-acc .pl a:hover svg{transform:translateX(4px)}
+.rh-cards.rh-acc .pl a:hover b{color:var(--lime)}
+.rh-cards.rh-acc .pl a:focus-visible{outline:2px solid var(--lime);outline-offset:2px;border-radius:4px}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .ph{height:34%}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .rs{margin-top:8px}
+.rh-cards.rh-acc .rh-p:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+@media (max-width:760px){
+.rh-cards.rh-acc .rh-p[aria-expanded="true"]{padding-top:190px}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .ph{height:200px}
+}
+.rh-cards.rh-acc .pl .plh{display:block;font-style:normal;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);padding:12px 2px 4px}
+.rh-cards.rh-acc .pl .plh:first-child{padding-top:2px}
+.rh-cards.rh-acc .pl .pls{display:block;font-style:normal;font-size:12px;font-weight:600;color:var(--muted);padding:8px 2px 2px;border-top:1px solid var(--line)}
+.rh-cards.rh-acc .rh-p.long .pl a{padding:7px 2px;font-size:13.5px}
+.rh-cards.rh-acc .rh-p.long[aria-expanded="true"] .pl{max-height:420px}
+.rh-cards.rh-acc .rh-p.long[aria-expanded="true"] .ph{height:20%}
+.rh-cards.rh-acc .rh-p.long[aria-expanded="true"] .rs{display:none}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"] .pl{max-height:260px}
+@media (max-width:760px){
+.rh-cards.rh-acc .rh-p.long[aria-expanded="true"] .ph{height:150px}
+.rh-cards.rh-acc .rh-p.long[aria-expanded="true"]{padding-top:150px}
+}
+.rh-cards.rh-acc .pl-all{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fg);text-decoration:none}
+.rh-cards.rh-acc .pl-all svg{width:14px;height:14px;transition:transform .2s ease}
+.rh-cards.rh-acc .pl-all:hover svg{transform:translateX(4px)}
+.rh-cards.rh-acc .rh-p[aria-expanded="true"]{cursor:pointer}
+.rh-cards.rh-acc .rh-p.long[aria-expanded="true"] .pl{max-height:460px}
+body.fs-editing .rh-p .ph,body.fs-editing .dp-img{position:relative}
+.rh-p .ph .fs-mtools{top:12px;right:12px}
+</style>
+
+<header class="wrap top">
+  <span class="name">Fátima Safie</span>
+  <div class="tools">
+    <button class="chip" id="lang" type="button" aria-label="Cambiar a español">ES</button>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <span class="k"><span class="en">Brand Manager · Marketing Strategist</span><span class="es">Brand Manager · Marketing Strategist</span></span>
+      <h1 style="margin-top:16px">Brand, Product Design <span class="and"><span class="en">and</span><span class="es">y</span></span> Marketing</h1>
+      <p class="lead"><span class="en">I build brands and make them tangible: from a new brand and its packaging to the sales deck and the social feed.</span><span class="es">Construyo marcas y las hago tangibles: desde una marca nueva y su packaging hasta la presentación de ventas y las redes sociales.</span></p>
+      <div class="seek"><i></i><span class="en">Looking for Brand Manager or Marketing Strategist roles</span><span class="es">Busco puestos de Brand Manager o Marketing Strategist</span></div>
+      <div class="ctas">
+        <a class="btn pri" href="cv/Fatima_Safie_CV_EN.pdf" data-cv><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span class="en">Download CV</span><span class="es">Descargar CV</span></a>
+        <a class="btn" href="portfolio.html"><span class="en">Full portfolio</span><span class="es">Portfolio completo</span> →</a>
+        <a class="btn" href="https://www.linkedin.com/in/fatima-safie-a93473a5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <dl class="glance" style="margin:0">
+      <div><dt><span class="en">Experience</span><span class="es">Experiencia</span></dt><dd><span class="en">7+ years · medical aesthetics, wealth management, fintech</span><span class="es">7+ años · medicina estética, gestión patrimonial, fintech</span></dd></div>
+      <div><dt><span class="en">Location</span><span class="es">Ubicación</span></dt><dd><span class="en">Madrid · authorized to work in Spain</span><span class="es">Madrid · autorizada para trabajar en España</span></dd></div>
+      <div><dt><span class="en">Languages</span><span class="es">Idiomas</span></dt><dd><span class="en">Spanish (native) · English (C2) · Arabic</span><span class="es">Español (nativo) · Inglés (C2) · Árabe</span></dd></div>
+      <div><dt><span class="en">Open to</span><span class="es">Modalidad</span></dt><dd><span class="en">In-house, remote or freelance</span><span class="es">In-house, remoto o freelance</span></dd></div>
+    </dl>
+  </section>
+
+  <div class="wrap">
+    <div class="proof">
+      <div><b>12</b><span class="en">territories where the neo.b products I design for are sold</span><span class="es">territorios donde se venden los productos neo.b que diseño</span></div>
+      <div><b>6+</b><span class="en">new distribution contracts this year, supported by my sales materials</span><span class="es">nuevos contratos de distribución este año, apoyados por mis materiales de venta</span></div>
+      <div><b>400+</b><span class="en">active clinics and users in the neo.b network</span><span class="es">clínicas y usuarios activos en la red de neo.b</span></div>
+      <div><b>4+</b><span class="en">new brands developed and launched at Fisherman WM</span><span class="es">marcas nuevas desarrolladas y lanzadas en Fisherman WM</span></div>
+    </div>
+  </div>
+
+  <section class="s wrap" aria-labelledby="h-work">
+    <div class="sh"><h2 id="h-work"><span class="en">Selected work</span><span class="es">Trabajo seleccionado</span></h2><a href="portfolio.html"><span class="en">See every project</span><span class="es">Ver todos los proyectos</span> →</a></div>
+    <div class="en"><div class="rh-acc rh-cards" data-acc=""><div class="rh-p" role="group" tabindex="0" aria-label="Branding" data-k="0" data-dk="branding" aria-expanded="false"><span class="num" aria-hidden="true">01.</span><span class="ph"><img src="img/rt-logo.jpg" alt="RealTokn logo" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5-8 4.5-8-4.5z"></path><path d="M4 12l8 4.5 8-4.5"></path><path d="M4 16.5L12 21l8-4.5"></path></svg></span><strong>Branding</strong><span class="rs">New brands from zero, brand manuals and guidelines. 4+ new brands launched at Fisherman WM.</span><span class="pl"><a href="portfolio.html#case-fisherman"><b>Fisherman WM</b><span>New brands &amp; campaigns</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-realtokn"><b>RealTokn</b><span>Brand from zero</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-bm-neob"><b>neo.b Labs</b><span>Brand guidelines</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-kebabs"><b>Kebabs</b><span>Brand identity</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-branding">See all projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div><div class="rh-p" role="group" tabindex="0" aria-label="Product Design" data-k="1" data-dk="product" aria-expanded="false"><span class="num" aria-hidden="true">02.</span><span class="ph"><img src="img/pk-nad.jpg" alt="neo.b NAD box and vial" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"></path><path d="M3 8v8l9 5 9-5V8"></path><path d="M12 13v8"></path></svg></span><strong>Product Design</strong><span class="rs">Packaging for neo.b NAD, BioActive, Hyboost and the Perfill redesign.</span><span class="pl"><a href="portfolio.html#case-nad"><b>neo.b NAD</b><span>Launch packaging</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-bioactive"><b>BioActive</b><span>Launch packaging</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-perfill"><b>Perfill</b><span>Packaging redesign</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-hyboost"><b>Hyboost</b><span>Packaging</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-product">See all projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div><div class="rh-p" role="group" tabindex="0" aria-label="Marketing Strategy" data-k="2" data-dk="strategy" aria-expanded="false"><span class="num" aria-hidden="true">03.</span><span class="ph"><img src="slides/co-5.jpg" alt="neo.b Labs territories map" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="13" r="8"></circle><circle cx="11" cy="13" r="4.2"></circle><circle cx="11" cy="13" r="1" fill="currentColor"></circle><path d="M11 13l8.5-8.5M16 4.5h3.5V8"></path></svg></span><strong>Marketing Strategy</strong><span class="rs">Sales materials for distributor pitches, integrated campaigns, webinars and client events.</span><span class="pl"><a href="portfolio.html#case-expansion"><b>neo.b Labs</b><span>Sales &amp; distributor materials</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-fwm-events"><b>Fisherman WM</b><span>Webinars &amp; client events</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-congress"><b>EKAM Bodrum</b><span>Speaker deck &amp; event content</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-strategy">See all projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div><div class="rh-p long" role="group" tabindex="0" aria-label="Graphic &amp; Web Design" data-k="3" data-dk="graphic" aria-expanded="false"><span class="num" aria-hidden="true">04.</span><span class="ph"><img src="img/sm-beauty.jpg" alt="neo.b Labs social media post" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 8h18M7 6h.01M9.5 6h.01M8 21h8M12 18v3"></path></svg></span><strong>Graphic &amp; Web Design</strong><span class="rs">Social media content and websites. 5+ inbound inquiries from social and web.</span><span class="pl"><em class="plh">Social media</em><a href="portfolio.html#case-digital"><b>neo.b Labs</b><span>Social content</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><em class="pls">Other</em><a href="portfolio.html#case-foodstation"><b>Food Station</b><span>Social content</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-pentagono"><b>Pentágono</b><span>Social content</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-realestate"><b>Real estate</b><span>Video ads</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-movement"><b>Movement</b><span>Poster campaign</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><em class="plh">Website</em><a href="portfolio.html#case-neob-web"><b>neo.b Labs</b><span>neoblab.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><em class="plh">Print</em><a href="portfolio.html#case-fwm-realestate"><b>Fisherman WM</b><span>Real estate brochures</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-graphic">See all projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div></div></div>
+    <div class="es"><div class="rh-acc rh-cards" data-acc=""><div class="rh-p" role="group" tabindex="0" aria-label="Branding" data-k="0" data-dk="branding" aria-expanded="false"><span class="num" aria-hidden="true">01.</span><span class="ph"><img src="img/rt-logo.jpg" alt="RealTokn logo" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5-8 4.5-8-4.5z"></path><path d="M4 12l8 4.5 8-4.5"></path><path d="M4 16.5L12 21l8-4.5"></path></svg></span><strong>Branding</strong><span class="rs">Marcas nuevas desde cero, manuales y guías de marca. Más de 4 marcas nuevas lanzadas en Fisherman WM.</span><span class="pl"><a href="portfolio.html#case-fisherman"><b>Fisherman WM</b><span>Marcas nuevas y campañas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-realtokn"><b>RealTokn</b><span>Una marca desde cero</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-bm-neob"><b>neo.b Labs</b><span>Guías de marca</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-kebabs"><b>Kebabs</b><span>Identidad de marca</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-branding">Ver todos los proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div><div class="rh-p" role="group" tabindex="0" aria-label="Product Design" data-k="1" data-dk="product" aria-expanded="false"><span class="num" aria-hidden="true">02.</span><span class="ph"><img src="img/pk-nad.jpg" alt="neo.b NAD box and vial" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"></path><path d="M3 8v8l9 5 9-5V8"></path><path d="M12 13v8"></path></svg></span><strong>Diseño de Producto</strong><span class="rs">Packaging para neo.b NAD, BioActive, Hyboost y el rediseño de Perfill.</span><span class="pl"><a href="portfolio.html#case-nad"><b>neo.b NAD</b><span>Packaging de lanzamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-bioactive"><b>BioActive</b><span>Packaging de lanzamiento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-perfill"><b>Perfill</b><span>Rediseño de packaging</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-hyboost"><b>Hyboost</b><span>Packaging</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-product">Ver todos los proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div><div class="rh-p" role="group" tabindex="0" aria-label="Marketing Strategy" data-k="2" data-dk="strategy" aria-expanded="false"><span class="num" aria-hidden="true">03.</span><span class="ph"><img src="slides/co-5.jpg" alt="neo.b Labs territories map" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="13" r="8"></circle><circle cx="11" cy="13" r="4.2"></circle><circle cx="11" cy="13" r="1" fill="currentColor"></circle><path d="M11 13l8.5-8.5M16 4.5h3.5V8"></path></svg></span><strong>Estrategia de Marketing</strong><span class="rs">Materiales de venta para captar distribuidores, campañas integradas, webinars y eventos para clientes.</span><span class="pl"><a href="portfolio.html#case-expansion"><b>neo.b Labs</b><span>Materiales de venta y para distribuidores</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-fwm-events"><b>Fisherman WM</b><span>Webinars y eventos para clientes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-congress"><b>EKAM Bodrum</b><span>Presentación y contenido del evento</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-strategy">Ver todos los proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div><div class="rh-p long" role="group" tabindex="0" aria-label="Graphic &amp; Web Design" data-k="3" data-dk="graphic" aria-expanded="false"><span class="num" aria-hidden="true">04.</span><span class="ph"><img src="img/sm-beauty.jpg" alt="neo.b Labs social media post" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 8h18M7 6h.01M9.5 6h.01M8 21h8M12 18v3"></path></svg></span><strong>Diseño Gráfico y Web</strong><span class="rs">Contenido para redes sociales y webs. Más de 5 consultas entrantes desde redes y web.</span><span class="pl"><em class="plh">Redes sociales</em><a href="portfolio.html#case-digital"><b>neo.b Labs</b><span>Contenido para redes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><em class="pls">Otros</em><a href="portfolio.html#case-foodstation"><b>Food Station</b><span>Contenido para redes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-pentagono"><b>Pentágono</b><span>Contenido para redes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-realestate"><b>Inmobiliaria</b><span>Anuncios en vídeo</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a href="portfolio.html#case-movement"><b>Movement</b><span>Campaña de pósters</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><em class="plh">Web</em><a href="portfolio.html#case-neob-web"><b>neo.b Labs</b><span>neoblab.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><em class="plh">Impresos</em><a href="portfolio.html#case-fwm-realestate"><b>Fisherman WM</b><span>Folletos inmobiliarios</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span><a class="pl-all" href="portfolio.html#disc-graphic">Ver todos los proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span></div></div></div>
+  </section>
+
+  <section class="s wrap" aria-labelledby="h-career">
+    <div class="sh"><h2 id="h-career"><span class="en">Experience</span><span class="es">Experiencia</span></h2></div>
+    <ol class="career">
+      <li><span class="when"><span class="en">May 2024 – Present</span><span class="es">May 2024 – Actualidad</span></span>
+        <div class="role"><b>Product Design &amp; Marketing</b><span>neo.b Labs · <span class="en">Medical aesthetics · Madrid</span><span class="es">Medicina estética · Madrid</span></span></div>
+        <p><span class="en">Packaging and brand design for product launches, sales and distributor materials, social media and the company websites.</span><span class="es">Diseño de packaging y de marca para lanzamientos, materiales de venta y para distribuidores, redes sociales y las webs de la empresa.</span></p></li>
+      <li><span class="when"><span class="en">Apr 2023 – Jun 2025</span><span class="es">Abr 2023 – Jun 2025</span></span>
+        <div class="role"><b>Freelance Social Media &amp; Content Creator</b><span>RealTokn · Fintech · <span class="en">Remote</span><span class="es">Remoto</span></span></div>
+        <p><span class="en">Built the RealTokn brand, from logo and brand manual to investor deck, and created its social content.</span><span class="es">Creé la marca RealTokn, del logo y el manual de marca a la presentación para inversores, y su contenido para redes.</span></p></li>
+      <li><span class="when"><span class="en">Apr 2018 – May 2022</span><span class="es">Abr 2018 – May 2022</span></span>
+        <div class="role"><b>Brand Manager &amp; Marketing Specialist</b><span>Fisherman Wealth Management · <span class="en">El Salvador</span><span class="es">El Salvador</span></span></div>
+        <p><span class="en">Developed and launched 4+ new brands. Ran 20+ webinars and 5+ client events a year.</span><span class="es">Desarrollé y lancé más de 4 marcas nuevas. Organicé más de 20 webinars y más de 5 eventos con clientes al año.</span></p></li>
+      <li class="small"><span class="when"><span class="en">May 2023 – Mar 2025</span><span class="es">May 2023 – Mar 2025</span></span>
+        <div class="role"><b>Learning Consultant</b><span>GoFluent · <span class="en">Advised 500+ corporate learners across 10+ client companies.</span><span class="es">Asesoré a más de 500 alumnos corporativos de más de 10 empresas cliente.</span></span></div></li>
+    </ol>
+    <div class="extras">
+      <div class="box"><h3><span class="en">Education</span><span class="es">Formación</span></h3>
+        <p><span class="en">Master's in Marketing &amp; Commercial Management</span><span class="es">Máster en Marketing y Dirección Comercial</span>, EUDE Business School · 2022 – 2023</p>
+        <p><span class="en">Bachelor's in Strategic Design</span><span class="es">Licenciatura en Diseño Estratégico</span>, Escuela de Comunicación Mónica Herrera · 2012 – 2018</p></div>
+      <div class="box"><h3><span class="en">Tools</span><span class="es">Herramientas</span></h3>
+        <div class="tags"><span>Illustrator</span><span>Photoshop</span><span>InDesign</span><span>Premiere</span><span>Canva</span><span>PowerPoint</span><span>Excel</span><span>GA4</span><span>Meta Ads</span><span>HubSpot</span><span>WordPress</span></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <div>
+      <h2><span class="en">Let’s talk about your next brand.</span><span class="es">Hablemos de tu próxima marca.</span></h2>
+      <p><span class="en">Available for Brand Manager and Marketing Strategist roles, in-house, remote or freelance.</span><span class="es">Disponible para puestos de Brand Manager y Marketing Strategist, in-house, remoto o freelance.</span></p>
+    </div>
+    <div class="cl">
+      <div class="row"><div><small>Email</small><strong id="mail">fmsafie@gmail.com</strong></div><button class="act" type="button" id="copy"><span class="en">Copy</span><span class="es">Copiar</span></button></div>
+      <div class="row"><div><small>LinkedIn</small><strong>fatima-safie</strong></div><a class="act" href="https://www.linkedin.com/in/fatima-safie-a93473a5" target="_blank" rel="noopener"><span class="en">Open</span><span class="es">Abrir</span></a></div>
+      <div class="row"><div><small>CV</small><strong><span class="en">One-page résumé (PDF)</span><span class="es">CV de una página (PDF)</span></strong></div><a class="act" href="cv/Fatima_Safie_CV_EN.pdf" data-cv><span class="en">Download</span><span class="es">Descargar</span></a></div>
+    </div>
+  </div>
+  <div class="wrap foot">Fátima Safie · Madrid</div>
+</footer>
+
+<script>
+(function(){
+  const root = document.documentElement, btn = document.getElementById('lang');
+  let lang = 'en';
+  try { const s = localStorage.getItem('fs1-lang'); if (s === 'es' || s === 'en') lang = s; else if ((navigator.language || '').toLowerCase().startsWith('es')) lang = 'es'; } catch(e) {}
+  function set(l){
+    lang = l; root.lang = l;
+    btn.textContent = l === 'es' ? 'EN' : 'ES';
+    btn.setAttribute('aria-label', l === 'es' ? 'Switch to English' : 'Cambiar a español');
+    document.querySelectorAll('[data-cv]').forEach(a => a.href = `cv/Fatima_Safie_CV_${l.toUpperCase()}.pdf`);
+    try { localStorage.setItem('fs1-lang', l); } catch(e) {}
+  }
+  set(lang);
+  btn.addEventListener('click', () => set(lang === 'es' ? 'en' : 'es'));
+
+  const copy = document.getElementById('copy'), mail = document.getElementById('mail');
+  copy.addEventListener('click', () => {
+    const done = () => { copy.querySelector('.en').textContent = 'Copied'; copy.querySelector('.es').textContent = 'Copiado';
+      setTimeout(() => { copy.querySelector('.en').textContent = 'Copy'; copy.querySelector('.es').textContent = 'Copiar'; }, 1800); };
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(mail); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(mail.textContent).then(done, sel); } catch(e) { sel(); }
+  });
+
+  let dl = null;
+  (async () => { try { if (window.claude && window.claude.use) dl = await window.claude.use('downloads'); } catch(e) {} })();
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-cv]'); if (!a || !dl) return;
+    e.preventDefault();
+    const name = `Fatima_Safie_CV_${lang.toUpperCase()}.pdf`;
+    fetch(`cv/${name}`).then(r => r.blob()).then(data => dl.save({ filename: name, data })).catch(() => {});
+  });
+  const fine = (() => { try { return matchMedia('(hover:hover) and (pointer:fine)').matches; } catch(e) { return false; } })();
+  const setOn = el => { const acc = el.closest('[data-acc]'); if (!acc) return; acc.querySelectorAll('.rh-p').forEach(p => p.setAttribute('aria-expanded', String(p === el))); };
+  document.addEventListener('mouseover', e => { if (!fine) return; const p = e.target.closest && e.target.closest('.rh-p'); if (p) setOn(p); });
+  document.addEventListener('mouseout', e => { if (!fine) return; const acc = e.target.closest && e.target.closest('[data-acc]'); if (acc && !acc.contains(e.relatedTarget)) acc.querySelectorAll('.rh-p').forEach(p => p.setAttribute('aria-expanded','false')); });
+  let lastPtr = 0; document.addEventListener('pointerdown', () => { lastPtr = Date.now(); }, true);
+  document.addEventListener('focusin', e => { if (Date.now() - lastPtr < 800) return; const p = e.target.closest && e.target.closest('.rh-p'); if (p) setOn(p); });
+  document.addEventListener('click', e => { const p = e.target.closest && e.target.closest('.rh-p'); if (!p) return; if (p.getAttribute('aria-expanded') !== 'true') { e.preventDefault(); setOn(p); } }, true);
+  document.addEventListener('keydown', e => { const p = e.target.classList && e.target.classList.contains('rh-p') ? e.target : null; if (p && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); setOn(p); } });
+})();
+</script>
+
+</body>
+</html>
