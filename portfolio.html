@@ -1613,7 +1613,7 @@ body::after{width:clamp(320px,38vw,560px);aspect-ratio:1;right:-14vw;top:38vh;bo
     <div class="tools">
       <button class="iconbtn lang" id="lang" type="button" aria-label="Cambiar a español">ES</button>
       <button class="iconbtn" id="theme" type="button" aria-label="Switch to dark mode"></button>
-      <a class="pill ink sm hire" href="cv/Fatima_Safie_CV_EN.pdf" id="hdr-cv" target="_blank" rel="noopener" data-cv><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></i>Download CV</a>
+      <a class="pill ink sm hire" href="Fatima_Safie_CV_EN.pdf" id="hdr-cv" target="_blank" rel="noopener" data-cv><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></i>Download CV</a>
       <button class="iconbtn menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
       </button>
@@ -1639,7 +1639,7 @@ body::after{width:clamp(320px,38vw,560px);aspect-ratio:1;right:-14vw;top:38vh;bo
 (function(){
 /* Paste a public link to your PDF résumé here to switch on the download button on the CV page. */
 const CV_LANG = (() => { try { return localStorage.getItem('fs-lang') === 'es' ? 'ES' : 'EN'; } catch(e) { return 'EN'; } })();
-const CV_PDF_URL = `cv/Fatima_Safie_CV_${CV_LANG}.pdf`;
+const CV_PDF_URL = `Fatima_Safie_CV_${CV_LANG}.pdf`;
 try { const h = document.getElementById('hdr-cv'); if (h) h.setAttribute('href', CV_PDF_URL); } catch(e) {}
 let cvDl = null;
 try { window.claude && window.claude.use && window.claude.use('downloads').then(d => { cvDl = d; }).catch(() => {}); } catch(e) {}
@@ -1664,7 +1664,7 @@ const FILTERS = [['all','All'],['design','Graphic Design'],['digital','Digital M
 const PROJECTS = [
  {
   "id": "nad",
-  "img": "img/pk-nad.jpg",
+  "img": "pk-nad.jpg",
   "pos": "50% 50%",
   "alt": "neo.b NAD box and vial",
   "title": "neo.b NAD launch",
@@ -1676,23 +1676,23 @@ const PROJECTS = [
   "tag": "Packaging · Launch",
   "gallery": [
    [
-    "img/pk-nad.jpg",
+    "pk-nad.jpg",
     "neo.b NAD box and vial"
    ],
    [
-    "vid/neob-nad.mp4",
+    "neob-nad.mp4",
     "NAD protocol reel"
    ],
    [
-    "img/brochure-12.jpg",
+    "brochure-12.jpg",
     "neo.b NAD, new generation page"
    ],
    [
-    "img/brochure-13.jpg",
+    "brochure-13.jpg",
     "Why NAD stands out page"
    ],
    [
-    "img/sm-nad.jpg",
+    "sm-nad.jpg",
     "Why choose neo.b NAD social media post"
    ]
   ],
@@ -1711,7 +1711,7 @@ const PROJECTS = [
  },
  {
   "id": "bioactive",
-  "img": "img/bio-1.jpg",
+  "img": "bio-1.jpg",
   "alt": "neo.b WHT, NAD and HRS vials",
   "title": "BioActive launch",
   "client": "neo.b Labs",
@@ -1734,22 +1734,22 @@ const PROJECTS = [
   "pos": "50% 50%",
   "gallery": [
    [
-    "img/bio-1.jpg",
+    "bio-1.jpg",
     "neo.b WHT, NAD and HRS vials"
    ],
    [
-    "img/bio-2.jpg",
+    "bio-2.jpg",
     "BioActive Line catalogue: cover and product pages"
    ],
    [
-    "img/bio-3.jpg",
+    "bio-3.jpg",
     "BioActive Line catalogue: introduction and mechanism of action"
    ]
   ]
  },
  {
   "id": "perfill",
-  "img": "img/pk-perfill-lw.jpg",
+  "img": "pk-perfill-lw.jpg",
   "pos": "50% 50%",
   "alt": "Perfill LW box and vial",
   "title": "Perfill packaging redesign",
@@ -1761,23 +1761,23 @@ const PROJECTS = [
   "tag": "Packaging · Redesign",
   "gallery": [
    [
-    "img/pk-perfill-lw.jpg",
+    "pk-perfill-lw.jpg",
     "Perfill LW box and vial"
    ],
    [
-    "img/pk-perfill-hw.jpg",
+    "pk-perfill-hw.jpg",
     "Perfill HW box"
    ],
    [
-    "img/perfill-ba.jpg",
+    "perfill-ba.jpg",
     "Before and after: the Dermclar Perfill HW vial and the redesigned Perfill HW box"
    ],
    [
-    "img/perfill-before.jpg",
+    "perfill-before.jpg",
     "Before the redesign: Dermclar Perfill HW vial"
    ],
    [
-    "img/perfill-dieline.jpg",
+    "perfill-dieline.jpg",
     "Before the redesign: Dermclar Perfill HW box dieline"
    ]
   ],
@@ -1795,7 +1795,7 @@ const PROJECTS = [
  },
  {
   "id": "hyboost",
-  "img": "img/pk-hyboost.jpg",
+  "img": "pk-hyboost.jpg",
   "pos": "50% 50%",
   "alt": "Hyboost box and vial",
   "title": "Hyboost packaging",
@@ -1807,11 +1807,11 @@ const PROJECTS = [
   "tag": "Packaging",
   "gallery": [
    [
-    "img/pk-hyboost.jpg",
+    "pk-hyboost.jpg",
     "Hyboost box and vial"
    ],
    [
-    "img/pk-hbplus.jpg",
+    "pk-hbplus.jpg",
     "Hyboost Plus box and vial"
    ]
   ],
@@ -1828,7 +1828,7 @@ const PROJECTS = [
  },
  {
   "id": "expansion",
-  "img": "img/brochure-1.jpg",
+  "img": "brochure-1.jpg",
   "pos": "50% 20%",
   "alt": "neo.b Labs company brochure cover",
   "title": "Sales &amp; distributor materials",
@@ -1841,51 +1841,51 @@ const PROJECTS = [
   "tag": "Sales materials",
   "gallery": [
    [
-    "slides/co-1.jpg",
+    "co-1.jpg",
     "Distributor deck cover: This is neo.b Labs"
    ],
    [
-    "slides/co-5.jpg",
+    "co-5.jpg",
     "Distributor deck: our territories"
    ],
    [
-    "slides/co-8.jpg",
+    "co-8.jpg",
     "Distributor deck: product lines"
    ],
    [
-    "slides/co-11.jpg",
+    "co-11.jpg",
     "Distributor deck: what we look for in our partners"
    ],
    [
-    "img/brochure-1.jpg",
+    "brochure-1.jpg",
     "Company brochure cover"
    ],
    [
-    "img/brochure-2.jpg",
+    "brochure-2.jpg",
     "Company brochure, About us"
    ],
    [
-    "img/brochure-6.jpg",
+    "brochure-6.jpg",
     "Company brochure, product portfolio"
    ],
    [
-    "img/hyboost-1.jpg",
+    "hyboost-1.jpg",
     "Hyboost Line catalogue cover"
    ],
    [
-    "img/hyboost-5.jpg",
+    "hyboost-5.jpg",
     "Hyboost Line catalogue, product page"
    ],
    [
-    "img/perfill-1.jpg",
+    "perfill-1.jpg",
     "Perfill catalogue cover"
    ],
    [
-    "img/perfill-4.jpg",
+    "perfill-4.jpg",
     "Perfill LW and HW catalogue spread"
    ],
    [
-    "img/perfill-3.jpg",
+    "perfill-3.jpg",
     "Perfill mechanism of action spread"
    ]
   ],
@@ -1906,7 +1906,7 @@ const PROJECTS = [
  },
  {
   "id": "bm-neob",
-  "img": "img/bm-nb-1.jpg",
+  "img": "bm-nb-1.jpg",
   "pos": "50% 50%",
   "alt": "neo.b Labs brand guidelines cover",
   "title": "neo.b Labs brand guidelines",
@@ -1918,43 +1918,43 @@ const PROJECTS = [
   "tag": "Brand guidelines",
   "gallery": [
    [
-    "img/bm-nb-1.jpg",
+    "bm-nb-1.jpg",
     "Brand guidelines cover"
    ],
    [
-    "img/bm-nb-12.jpg",
+    "bm-nb-12.jpg",
     "Logo"
    ],
    [
-    "img/bm-nb-13.jpg",
+    "bm-nb-13.jpg",
     "Logo safe area"
    ],
    [
-    "img/bm-nb-15.jpg",
+    "bm-nb-15.jpg",
     "Logo colour versions"
    ],
    [
-    "img/bm-nb-16.jpg",
+    "bm-nb-16.jpg",
     "Tagline"
    ],
    [
-    "img/bm-nb-18.jpg",
+    "bm-nb-18.jpg",
     "Look and feel moodboard"
    ],
    [
-    "img/bm-nb-19.jpg",
+    "bm-nb-19.jpg",
     "Colour palette"
    ],
    [
-    "img/bm-nb-20.jpg",
+    "bm-nb-20.jpg",
     "Typography"
    ],
    [
-    "img/bm-nb-23.jpg",
+    "bm-nb-23.jpg",
     "Social media application"
    ],
    [
-    "img/bm-nb-25.jpg",
+    "bm-nb-25.jpg",
     "Packaging application"
    ]
   ],
@@ -1971,7 +1971,7 @@ const PROJECTS = [
  },
  {
   "id": "deck-masterclass",
-  "img": "slides/mc-2.jpg",
+  "img": "mc-2.jpg",
   "pos": "50% 50%",
   "alt": "Perfill masterclass deck slide",
   "title": "Perfill masterclass deck",
@@ -1983,27 +1983,27 @@ const PROJECTS = [
   "tag": "Presentation Design · Training",
   "gallery": [
    [
-    "slides/mc-1.jpg",
+    "mc-1.jpg",
     "Cover: neo.b Labs Experience Center"
    ],
    [
-    "slides/mc-2.jpg",
+    "mc-2.jpg",
     "Beyond hydration: a smarter approach to skin density"
    ],
    [
-    "slides/mc-6.jpg",
+    "mc-6.jpg",
     "3D Art of Perfill"
    ],
    [
-    "slides/mc-8.jpg",
+    "mc-8.jpg",
     "Mechanism of action"
    ],
    [
-    "slides/mc-10.jpg",
+    "mc-10.jpg",
     "Perfill LW and HW composition and benefits"
    ],
    [
-    "slides/mc-12.jpg",
+    "mc-12.jpg",
     "Application areas"
    ]
   ],
@@ -2021,7 +2021,7 @@ const PROJECTS = [
  },
  {
   "id": "deck-webinar",
-  "img": "slides/wb-1.jpg",
+  "img": "wb-1.jpg",
   "pos": "50% 50%",
   "alt": "Hyboost and NAD webinar deck cover",
   "title": "Hyboost & NAD webinar, Colombia",
@@ -2033,27 +2033,27 @@ const PROJECTS = [
   "tag": "Presentation Design · Webinar",
   "gallery": [
    [
-    "slides/wb-1.jpg",
+    "wb-1.jpg",
     "Cover: an integral approach to skin hydration"
    ],
    [
-    "slides/wb-3.jpg",
+    "wb-3.jpg",
     "Beyond hydration"
    ],
    [
-    "slides/wb-4.jpg",
+    "wb-4.jpg",
     "Pharmaceutical-grade hyaluronic acid"
    ],
    [
-    "slides/wb-8.jpg",
+    "wb-8.jpg",
     "neo.b portfolio overview"
    ],
    [
-    "slides/wb-12.jpg",
+    "wb-12.jpg",
     "Hyboost and Hyboost Plus composition"
    ],
    [
-    "slides/wb-16.jpg",
+    "wb-16.jpg",
     "neo.b NAD, new generation"
    ]
   ],
@@ -2071,7 +2071,7 @@ const PROJECTS = [
  },
  {
   "id": "digital",
-  "img": "img/sm-beauty.jpg",
+  "img": "sm-beauty.jpg",
   "pos": "50% 50%",
   "alt": "neo.b Labs Instagram post: Beauty begins beneath the surface",
   "title": "Social media",
@@ -2085,47 +2085,47 @@ const PROJECTS = [
   "layout": "grid3",
   "gallery": [
    [
-    "img/sm-beauty.jpg",
+    "sm-beauty.jpg",
     "Post: Beauty begins beneath the surface"
    ],
    [
-    "img/sm-hydration.jpg",
+    "sm-hydration.jpg",
     "Post: Deep hydration and skin repair"
    ],
    [
-    "img/sm-winter.jpg",
+    "sm-winter.jpg",
     "Post: Your winter skincare routine"
    ],
    [
-    "img/sm-aging.jpg",
+    "sm-aging.jpg",
     "Post: skin concerns the treatments address"
    ],
    [
-    "img/sm-ha.jpg",
+    "sm-ha.jpg",
     "Post for doctors: qualities of hyaluronic acid"
    ],
    [
-    "img/sm-exosomes.jpg",
+    "sm-exosomes.jpg",
     "Post for doctors: exosomes and microneedling"
    ],
    [
-    "img/sm-doctors.jpg",
+    "sm-doctors.jpg",
     "Story: Doctor’s choice"
    ],
    [
-    "img/sm-testimonial.jpg",
+    "sm-testimonial.jpg",
     "Doctor testimonial on Perfill HW"
    ],
    [
-    "img/sm-boost.jpg",
+    "sm-boost.jpg",
     "Post: hydration that lasts all day"
    ],
    [
-    "vid/neob-recap.mp4",
+    "neob-recap.mp4",
     "Event recap reel"
    ],
    [
-    "vid/neob-turkey.mp4",
+    "neob-turkey.mp4",
     "Workshop recap reel"
    ]
   ],
@@ -2145,7 +2145,7 @@ const PROJECTS = [
  },
  {
   "id": "neob-web",
-  "img": "img/web-1.jpg",
+  "img": "web-1.jpg",
   "pos": "50% 50%",
   "alt": "neo.b Labs website home page",
   "title": "neo.b Labs website",
@@ -2157,19 +2157,19 @@ const PROJECTS = [
   "tag": "Website",
   "gallery": [
    [
-    "img/web-1.jpg",
+    "web-1.jpg",
     "Website home page: pharmaceutical-grade skin boosters"
    ],
    [
-    "img/web-2.jpg",
+    "web-2.jpg",
     "Website: quality, range and exclusive distribution, plus distribution partners"
    ],
    [
-    "img/web-3.jpg",
+    "web-3.jpg",
     "Website: the three product lines"
    ],
    [
-    "vid/neob-web.mp4",
+    "neob-web.mp4",
     "Website intro video"
    ]
   ],
@@ -2187,7 +2187,7 @@ const PROJECTS = [
  },
  {
   "id": "congress",
-  "img": "slides/bod-1.jpg",
+  "img": "bod-1.jpg",
   "alt": "Inside-Out Rejuvenation Method presentation cover",
   "title": "EKAM Bodrum",
   "cardTitle": "EKAM Bodrum",
@@ -2211,34 +2211,34 @@ const PROJECTS = [
   "layout": "grid3",
   "gallery": [
    [
-    "slides/bod-1.jpg",
+    "bod-1.jpg",
     "Presentation cover: Inside-Out Rejuvenation Method"
    ],
    [
-    "slides/bod-2.jpg",
+    "bod-2.jpg",
     "All-in-one solution slide"
    ],
    [
-    "slides/bod-3.jpg",
+    "bod-3.jpg",
     "Double-action skin revitalization slide"
    ],
    [
-    "slides/bod-4.jpg",
+    "bod-4.jpg",
     "Application techniques slide"
    ],
    [
-    "slides/bod-5.jpg",
+    "bod-5.jpg",
     "Products of choice slide"
    ],
    [
-    "slides/bod-6.jpg",
+    "bod-6.jpg",
     "The power of synergy slide"
    ]
   ]
  },
  {
   "id": "fwm-realestate",
-  "img": "img/re-urban-1.jpg",
+  "img": "re-urban-1.jpg",
   "pos": "50% 50%",
   "alt": "Urban San Jacinto catalogue mockup",
   "title": "Real estate brochure &amp; catalogue",
@@ -2252,23 +2252,23 @@ const PROJECTS = [
   "tag": "Brochure · Catalogue",
   "gallery": [
    [
-    "img/re-urban-1.jpg",
+    "re-urban-1.jpg",
     "Urban San Jacinto catalogue: cover and amenities spread"
    ],
    [
-    "img/re-urban-2.jpg",
+    "re-urban-2.jpg",
     "Urban San Jacinto catalogue: apartment model spread"
    ],
    [
-    "img/re-urban-3.jpg",
+    "re-urban-3.jpg",
     "Urban San Jacinto catalogue: project spread"
    ],
    [
-    "img/re-aria-1.jpg",
+    "re-aria-1.jpg",
     "Aria Escalón fold-out brochure: apartment models, amenities and location"
    ],
    [
-    "img/re-aria-2.jpg",
+    "re-aria-2.jpg",
     "Aria Escalón fold-out brochure: cover side"
    ]
   ],
@@ -2283,7 +2283,7 @@ const PROJECTS = [
  },
  {
   "id": "fisherman",
-  "img": "img/fisherman-cover.jpg",
+  "img": "fisherman-cover.jpg",
   "pos": "50% 50%",
   "alt": "Fisherman social media posts and brochure",
   "title": "Fisherman WM<br>New brands &amp; campaigns",
@@ -2300,23 +2300,23 @@ const PROJECTS = [
   "kind": "Documented outcome",
   "gallery": [
    [
-    "img/fwm-logo.jpg",
+    "fwm-logo.jpg",
     "Fisherman educación financiera logo"
    ],
    [
-    "img/fisherman.jpg",
+    "fisherman.jpg",
     "Fisherman social media posts and printed brochure"
    ],
    [
-    "vid/fwm-siman.mp4",
+    "fwm-siman.mp4",
     "Financial tips video for Siman"
    ],
    [
-    "img/bfe-1.jpg",
+    "bfe-1.jpg",
     "Bienestar Financiero Empresarial brochure: cover and opening spread"
    ],
    [
-    "img/bfe-2.jpg",
+    "bfe-2.jpg",
     "Bienestar Financiero Empresarial brochure: method and financial situation spread"
    ]
   ],
@@ -2383,7 +2383,7 @@ const PROJECTS = [
  },
  {
   "id": "fwm-radio",
-  "img": "vid/fwm-bw.jpg",
+  "img": "fwm-bw.jpg",
   "pos": "50% 50%",
   "alt": "Fisherman financial education programme",
   "title": "Podcast &amp; radio",
@@ -2396,7 +2396,7 @@ const PROJECTS = [
   "tag": "Audio content",
   "gallery": [
    [
-    "vid/fwm-bw.mp4",
+    "fwm-bw.mp4",
     "Mis finanzas, mi futuro programme video"
    ]
   ],
@@ -2413,7 +2413,7 @@ const PROJECTS = [
  },
  {
   "id": "realtokn",
-  "img": "img/rt-logo.jpg",
+  "img": "rt-logo.jpg",
   "pos": "50% 50%",
   "alt": "RealTokn logo",
   "title": "RealTokn<br>Brand from zero",
@@ -2428,63 +2428,63 @@ const PROJECTS = [
   "layout": "grid3",
   "gallery": [
    [
-    "img/rt-logo.jpg",
+    "rt-logo.jpg",
     "RealTokn logo"
    ],
    [
-    "img/bm-rt-1.jpg",
+    "bm-rt-1.jpg",
     "Brand manual cover"
    ],
    [
-    "img/bm-rt-3.jpg",
+    "bm-rt-3.jpg",
     "Brand manual: main logo"
    ],
    [
-    "img/bm-rt-4.jpg",
+    "bm-rt-4.jpg",
     "Brand manual: logo variations"
    ],
    [
-    "img/bm-rt-5.jpg",
+    "bm-rt-5.jpg",
     "Brand manual: typography"
    ],
    [
-    "img/bm-rt-6.jpg",
+    "bm-rt-6.jpg",
     "Brand manual: colour palette"
    ],
    [
-    "img/bm-rt-7.jpg",
+    "bm-rt-7.jpg",
     "Brand manual: graphic elements"
    ],
    [
-    "img/bm-rt-8.jpg",
+    "bm-rt-8.jpg",
     "Brand manual: social media templates"
    ],
    [
-    "slides/rt-1.jpg",
+    "rt-1.jpg",
     "Investor deck cover"
    ],
    [
-    "slides/rt-2.jpg",
+    "rt-2.jpg",
     "Investor deck: how RealTokn changes real-estate investing"
    ],
    [
-    "slides/rt-5.jpg",
+    "rt-5.jpg",
     "Investor deck: the market problem"
    ],
    [
-    "slides/rt-12.jpg",
+    "rt-12.jpg",
     "Investor deck: business model"
    ],
    [
-    "img/realtokn.jpg",
+    "realtokn.jpg",
     "Social media posts"
    ],
    [
-    "vid/rt-launch.mp4",
+    "rt-launch.mp4",
     "Launch reel"
    ],
    [
-    "vid/rt-reel.mp4",
+    "rt-reel.mp4",
     "Invest from 100 dollars reel"
    ]
   ],
@@ -2506,7 +2506,7 @@ const PROJECTS = [
  },
  {
   "id": "kebabs",
-  "img": "img/kebabs-cover.jpg",
+  "img": "kebabs-cover.jpg",
   "pos": "30% 50%",
   "alt": "Kebabs brand identity: logo, packaging and merchandise",
   "title": "Kebabs brand identity",
@@ -2519,7 +2519,7 @@ const PROJECTS = [
   "tag": "Graphic Design · Branding",
   "gallery": [
    [
-    "img/kebabs.jpg",
+    "kebabs.jpg",
     "Kebabs identity: logo, cups, caps, t-shirts and opening poster"
    ]
   ],
@@ -2537,7 +2537,7 @@ const PROJECTS = [
  },
  {
   "id": "foodstation",
-  "img": "img/foodstation-cover.jpg",
+  "img": "foodstation-cover.jpg",
   "pos": "50% 50%",
   "alt": "Food Station social media posts",
   "title": "Food Station social media",
@@ -2550,7 +2550,7 @@ const PROJECTS = [
   "tag": "Digital Marketing · Social media",
   "gallery": [
    [
-    "img/foodstation.jpg",
+    "foodstation.jpg",
     "Food Station social media posts"
    ]
   ],
@@ -2568,7 +2568,7 @@ const PROJECTS = [
  },
  {
   "id": "pentagono",
-  "img": "img/pentagono-cover.jpg",
+  "img": "pentagono-cover.jpg",
   "pos": "50% 50%",
   "alt": "Pentágono social media posts",
   "title": "Pentágono social media",
@@ -2581,7 +2581,7 @@ const PROJECTS = [
   "tag": "Digital Marketing · Social media",
   "gallery": [
    [
-    "img/pentagono.jpg",
+    "pentagono.jpg",
     "Pentágono social media posts"
    ]
   ],
@@ -2599,7 +2599,7 @@ const PROJECTS = [
  },
  {
   "id": "movement",
-  "img": "img/movement-cover.jpg",
+  "img": "movement-cover.jpg",
   "pos": "50% 50%",
   "alt": "Movement posters and billboards in the street",
   "title": "Movement poster campaign",
@@ -2612,7 +2612,7 @@ const PROJECTS = [
   "tag": "Offline · Poster design",
   "gallery": [
    [
-    "img/movement.jpg",
+    "movement.jpg",
     "Movement posters, bus shelters and billboards"
    ]
   ],
@@ -2631,7 +2631,7 @@ const PROJECTS = [
  },
  {
   "id": "realestate",
-  "img": "vid/re-santaana.jpg",
+  "img": "re-santaana.jpg",
   "pos": "50% 50%",
   "alt": "Real-estate video ad",
   "title": "Real-estate video ads",
@@ -2644,11 +2644,11 @@ const PROJECTS = [
   "layout": "grid3",
   "gallery": [
    [
-    "vid/re-santaana.mp4",
+    "re-santaana.mp4",
     "Santa Ana residential lots ad"
    ],
    [
-    "vid/re-aria.mp4",
+    "re-aria.mp4",
     "Aria Escalón apartments ad"
    ]
   ],
@@ -2667,7 +2667,7 @@ const PROJECTS = [
  },
  {
   "id": "wanted",
-  "img": "img/pd-8.jpg",
+  "img": "pd-8.jpg",
   "pos": "50% 50%",
   "alt": "Bull bench prototype being tested",
   "title": "Bull · WantedDesign New York",
@@ -2679,23 +2679,23 @@ const PROJECTS = [
   "tag": "Product Design · Workshop",
   "gallery": [
    [
-    "img/pd-8.jpg",
+    "pd-8.jpg",
     "Testing the Bull bench"
    ],
    [
-    "img/pd-7.jpg",
+    "pd-7.jpg",
     "Workshop in New York"
    ],
    [
-    "img/pd-9.jpg",
+    "pd-9.jpg",
     "Final Bull bench"
    ],
    [
-    "img/pd-6.jpg",
+    "pd-6.jpg",
     "Design process diagram"
    ],
    [
-    "img/pd-5.jpg",
+    "pd-5.jpg",
     "Project introduction"
    ]
   ],
@@ -2714,7 +2714,7 @@ const PROJECTS = [
  },
  {
   "id": "icff",
-  "img": "img/pd-14.jpg",
+  "img": "pd-14.jpg",
   "pos": "50% 50%",
   "alt": "Design for Mobility exhibition at ICFF New York",
   "title": "Design for Mobility · ICFF Schools",
@@ -2726,23 +2726,23 @@ const PROJECTS = [
   "tag": "Product Design · Design Thinking",
   "gallery": [
    [
-    "img/pd-14.jpg",
+    "pd-14.jpg",
     "Exhibition at ICFF New York"
    ],
    [
-    "img/pd-13.jpg",
+    "pd-13.jpg",
     "The four products"
    ],
    [
-    "img/pd-12.jpg",
+    "pd-12.jpg",
     "Field research with coffee pickers"
    ],
    [
-    "img/pd-11.jpg",
+    "pd-11.jpg",
     "Design process diagram"
    ],
    [
-    "img/pd-10.jpg",
+    "pd-10.jpg",
     "Project introduction"
    ]
   ],
@@ -2838,19 +2838,19 @@ function card(p, i){
 }
 const SECTIONS = [
   { id:'strategy', title:'Strategy & Campaigns', text:'The thinking behind the work: positioning, events and content programmes, planned and run end to end.', ratio:'4/3', cols:3, cover:null, feat:true,
-    items:[['fisherman','img/fisherman-cover.jpg','Fisherman WM brand strategy'],['fwm-events',null,'Fisherman WM · events & webinars','10+ events'],['fwm-radio',null,'Fisherman WM · radio & podcast','Live → Spotify']] },
-  { id:'social', title:'Social Media', text:'Content systems for Instagram and LinkedIn: education, launches and testimonials.', ratio:'1/1', cols:3, cover:'img/sm-beauty.jpg',
-    items:[['digital','img/sm-beauty.jpg','neo.b Labs'],['realtokn','img/realtokn-cover.jpg','Real Tokn'],['foodstation','img/foodstation-cover.jpg','Food Station'],['digital','img/sm-ha.jpg','neo.b Labs · for doctors'],['pentagono','img/pentagono-cover.jpg','Pentágono'],['fisherman','img/fisherman-cover.jpg','Fisherman WM']] },
-  { id:'packaging', title:'Product & Packaging', text:'Packaging for a medical-aesthetics range, and product design shown in New York.', ratio:'4/3', cols:3, cover:'img/pk-hyboost.jpg',
-    items:[['perfill','img/pk-hyboost.jpg','Hyboost'],['nad','img/pk-nad.jpg','neo.b NAD'],['perfill','img/pk-perfill-lw.jpg','Perfill LW'],['wanted','img/pd-8.jpg','Bull bench · WantedDesign NY'],['icff','img/pd-14.jpg','Design for Mobility · ICFF NY'],['perfill','img/pk-hbplus.jpg','Hyboost Plus']] },
-  { id:'branding', title:'Branding', text:'Logos, brand manuals and visual identities, applied from packaging to billboards.', ratio:'4/3', cols:3, cover:'img/kebabs-cover.jpg',
-    items:[['bm-neob','img/bm-nb-1.jpg','neo.b Labs brand guidelines'],['bm-realtokn','img/bm-rt-1.jpg','Real Tokn brand manual'],['kebabs','img/kebabs-cover.jpg','Kebabs'],['bm-neob','img/bm-nb-18.jpg','neo.b Labs look & feel'],['realtokn','img/rt-logo.jpg','Real Tokn logo'],['fisherman','img/fwm-logo.jpg','Fisherman WM']] },
-  { id:'presentations', title:'Presentation Design', text:'Company, training and investor decks that make complex ideas easy to follow.', ratio:'16/9', cols:2, cover:'slides/co-1.jpg',
-    items:[['deck-company','slides/co-1.jpg','neo.b Labs company deck'],['deck-masterclass','slides/mc-2.jpg','Perfill masterclass'],['deck-webinar','slides/wb-1.jpg','Hyboost & NAD webinar'],['deck-realtokn','slides/rt-1.jpg','Real Tokn investment deck']] },
-  { id:'graphic', title:'Graphic Design', text:'Catalogues, brochures, posters and printed sales materials.', ratio:'4/5', cols:3, cover:'img/brochure-1.jpg',
-    items:[['expansion','img/brochure-1.jpg','Company brochure'],['expansion','img/hyboost-1.jpg','Hyboost catalogue'],['expansion','img/perfill-1.jpg','Perfill catalogue'],['nad','img/brochure-12.jpg','neo.b NAD brochure'],['movement','img/movement-cover.jpg','Movement posters'],['expansion','img/brochure-6.jpg','Product portfolio']] },
-  { id:'video', title:'Videos & Reels', text:'Event recaps, product reels and short videos for launches, education and web.', cover:'vid/neob-recap.jpg',
-    videos:[['congress','vid/neob-recap','neo.b Labs · event recap',9/16],['congress','vid/neob-turkey','neo.b Labs · Turkey workshop recap',16/9],['nad','vid/neob-nad','neo.b Labs · NAD protocol reel',9/16],['digital','vid/neob-web','neo.b Labs · website intro',16/9],['realtokn','vid/rt-launch','Real Tokn · launch reel',9/16],['realestate','vid/re-aria','Real-estate ad · Aria Escalón',9/16],['realestate','vid/re-santaana','Real-estate ad · Santa Ana lots',9/16],['realtokn','vid/rt-reel','Real Tokn · reel',9/16],['fisherman','vid/fwm-bw','Fisherman WM · programme video',16/9]] }
+    items:[['fisherman','fisherman-cover.jpg','Fisherman WM brand strategy'],['fwm-events',null,'Fisherman WM · events & webinars','10+ events'],['fwm-radio',null,'Fisherman WM · radio & podcast','Live → Spotify']] },
+  { id:'social', title:'Social Media', text:'Content systems for Instagram and LinkedIn: education, launches and testimonials.', ratio:'1/1', cols:3, cover:'sm-beauty.jpg',
+    items:[['digital','sm-beauty.jpg','neo.b Labs'],['realtokn','realtokn-cover.jpg','Real Tokn'],['foodstation','foodstation-cover.jpg','Food Station'],['digital','sm-ha.jpg','neo.b Labs · for doctors'],['pentagono','pentagono-cover.jpg','Pentágono'],['fisherman','fisherman-cover.jpg','Fisherman WM']] },
+  { id:'packaging', title:'Product & Packaging', text:'Packaging for a medical-aesthetics range, and product design shown in New York.', ratio:'4/3', cols:3, cover:'pk-hyboost.jpg',
+    items:[['perfill','pk-hyboost.jpg','Hyboost'],['nad','pk-nad.jpg','neo.b NAD'],['perfill','pk-perfill-lw.jpg','Perfill LW'],['wanted','pd-8.jpg','Bull bench · WantedDesign NY'],['icff','pd-14.jpg','Design for Mobility · ICFF NY'],['perfill','pk-hbplus.jpg','Hyboost Plus']] },
+  { id:'branding', title:'Branding', text:'Logos, brand manuals and visual identities, applied from packaging to billboards.', ratio:'4/3', cols:3, cover:'kebabs-cover.jpg',
+    items:[['bm-neob','bm-nb-1.jpg','neo.b Labs brand guidelines'],['bm-realtokn','bm-rt-1.jpg','Real Tokn brand manual'],['kebabs','kebabs-cover.jpg','Kebabs'],['bm-neob','bm-nb-18.jpg','neo.b Labs look & feel'],['realtokn','rt-logo.jpg','Real Tokn logo'],['fisherman','fwm-logo.jpg','Fisherman WM']] },
+  { id:'presentations', title:'Presentation Design', text:'Company, training and investor decks that make complex ideas easy to follow.', ratio:'16/9', cols:2, cover:'co-1.jpg',
+    items:[['deck-company','co-1.jpg','neo.b Labs company deck'],['deck-masterclass','mc-2.jpg','Perfill masterclass'],['deck-webinar','wb-1.jpg','Hyboost & NAD webinar'],['deck-realtokn','rt-1.jpg','Real Tokn investment deck']] },
+  { id:'graphic', title:'Graphic Design', text:'Catalogues, brochures, posters and printed sales materials.', ratio:'4/5', cols:3, cover:'brochure-1.jpg',
+    items:[['expansion','brochure-1.jpg','Company brochure'],['expansion','hyboost-1.jpg','Hyboost catalogue'],['expansion','perfill-1.jpg','Perfill catalogue'],['nad','brochure-12.jpg','neo.b NAD brochure'],['movement','movement-cover.jpg','Movement posters'],['expansion','brochure-6.jpg','Product portfolio']] },
+  { id:'video', title:'Videos & Reels', text:'Event recaps, product reels and short videos for launches, education and web.', cover:'neob-recap.jpg',
+    videos:[['congress','neob-recap','neo.b Labs · event recap',9/16],['congress','neob-turkey','neo.b Labs · Turkey workshop recap',16/9],['nad','neob-nad','neo.b Labs · NAD protocol reel',9/16],['digital','neob-web','neo.b Labs · website intro',16/9],['realtokn','rt-launch','Real Tokn · launch reel',9/16],['realestate','re-aria','Real-estate ad · Aria Escalón',9/16],['realestate','re-santaana','Real-estate ad · Santa Ana lots',9/16],['realtokn','rt-reel','Real Tokn · reel',9/16],['fisherman','fwm-bw','Fisherman WM · programme video',16/9]] }
 ];
 const GROUPS = [
   { id:'g-strategy', label:'Strategy', title:'Strategy & Campaigns', text:'Positioning, events and content programmes, planned and run end to end.', blurb:'From brand positioning to campaigns and events.', subs:'Positioning · Events · Content', icon:'strategy', kick:'Strategy, then execution', secs:['strategy'] },
@@ -2916,7 +2916,7 @@ const WCOVER = {
   'fwm-radio':  { cls:'t-ink',  html:'<strong>Live →<br>Spotify</strong>', wave:true }
 };
 function coverFor(pid){
-  const IMGX = { 'bm-neob':['img/bm-nb-18.jpg','neo.b Labs look and feel'] };
+  const IMGX = { 'bm-neob':['bm-nb-18.jpg','neo.b Labs look and feel'] };
   if (IMGX[pid]) return `<span class="wc-cover"><img src="${IMGX[pid][0]}" alt="${IMGX[pid][1]}" loading="lazy"></span>`;
   if (WCOVER[pid]) return `<span class="wc-cover txt ${WCOVER[pid].cls}">${WCOVER[pid].html}${WCOVER[pid].wave ? WAVE : ''}</span>`;
   for (const d of SECTIONS) { if (d.items) { const it = d.items.find(x => x[0] === pid && x[1]); if (it) return `<span class="wc-cover"><img src="${it[1]}" alt="${it[2]}" loading="lazy"></span>`; } }
@@ -3001,13 +3001,13 @@ function strategySection(){
 
 const HOME_SETS = {
   strategy: { label:'Strategy', line:'Positioning · Campaigns · Growth',
-    feat:{ id:'neob-strategy', name:'neo.b Labs', sub:'Growth &amp; Content Strategy', desc:'Developing a content ecosystem to strengthen clinical authority, doctor visibility and international positioning.', tags:['Strategy','Content','Brand Positioning'], imgs:[['img/sm-testimonial.jpg','Doctor testimonial post for neo.b Labs'],['img/sm-doctors.jpg','Doctor’s choice post for neo.b Labs']] },
+    feat:{ id:'neob-strategy', name:'neo.b Labs', sub:'Growth &amp; Content Strategy', desc:'Developing a content ecosystem to strengthen clinical authority, doctor visibility and international positioning.', tags:['Strategy','Content','Brand Positioning'], imgs:[['sm-testimonial.jpg','Doctor testimonial post for neo.b Labs'],['sm-doctors.jpg','Doctor’s choice post for neo.b Labs']] },
     sec:[{ id:'fisherman', name:'Fisherman Wealth Management', sub:'Brand Strategy &amp; Content', desc:'Building a stronger brand presence through positioning, communication and content.', tags:['Strategy','Positioning','Content'] }, { id:'fwm-events' }] },
   brand: { label:'Brand &amp; Design', line:'Identity · Packaging · Visual systems',
-    feat:{ id:'perfill', imgs:[['img/pk-hyboost.jpg','Hyboost box and vial'],['img/pk-perfill-lw.jpg','Perfill LW packaging']] },
+    feat:{ id:'perfill', imgs:[['pk-hyboost.jpg','Hyboost box and vial'],['pk-perfill-lw.jpg','Perfill LW packaging']] },
     sec:[{ id:'bm-neob' }, { id:'deck-company' }] },
   digital: { label:'Digital Content', line:'Social · Video · Campaigns',
-    feat:{ id:'digital', imgs:[['img/sm-beauty.jpg','neo.b Labs social media post'],['img/sm-ha.jpg','neo.b Labs post for doctors']] },
+    feat:{ id:'digital', imgs:[['sm-beauty.jpg','neo.b Labs social media post'],['sm-ha.jpg','neo.b Labs post for doctors']] },
     sec:[{ id:'congress' }, { id:'realtokn' }] }
 };
 function homeInfo(x){
@@ -3029,18 +3029,18 @@ function homeProjects(key){
 
 const CLIENTS = [
   { id:'c-fwm', label:'Fisherman WM', name:'Fisherman Wealth Management', years:'2018 — 2022', role:'Brand Manager · Financial services', line:'Building trust through brand strategy and financial education.',
-    pairs:[ { k:'Strategy', id:'fisherman', img:'img/fisherman-cover.jpg', t:'Brand strategy &amp; positioning', d:'Competitor analysis, positioning and communication direction.' },
-            { k:'Content', id:'fwm-radio', img:'vid/fwm-bw.jpg', t:'Radio show &amp; podcast', d:'One programme live on radio and Facebook, then on Spotify.' } ],
-    band:{ k:'Content &amp; events', id:'fwm-events', img:'img/fisherman.jpg', t:'10+ financial education events · 100–250 attendees each', note:'Investing in knowledge' } },
+    pairs:[ { k:'Strategy', id:'fisherman', img:'fisherman-cover.jpg', t:'Brand strategy &amp; positioning', d:'Competitor analysis, positioning and communication direction.' },
+            { k:'Content', id:'fwm-radio', img:'fwm-bw.jpg', t:'Radio show &amp; podcast', d:'One programme live on radio and Facebook, then on Spotify.' } ],
+    band:{ k:'Content &amp; events', id:'fwm-events', img:'fisherman.jpg', t:'10+ financial education events · 100–250 attendees each', note:'Investing in knowledge' } },
   { id:'c-neob', label:'neo.b Labs', name:'neo.b Labs', years:'2024 — Present', role:'Marketing Manager · Medical aesthetics', line:'From product portfolio to a global content ecosystem.',
-    trio:[ { k:'Strategy', id:'neob-strategy', img:'img/sm-testimonial.jpg', t:'Growth &amp; content strategy', d:'Audit, pillars, content mix and doctor activation.' },
-           { k:'Brand system', id:'bm-neob', img:'img/bm-nb-18.jpg', t:'Global brand system', d:'Visual identity and guidelines across markets and touchpoints.' },
-           { k:'Digital content', id:'digital', img:'img/sm-beauty.jpg', t:'Content ecosystem', d:'Social media, campaigns and educational content.' } ],
+    trio:[ { k:'Strategy', id:'neob-strategy', img:'sm-testimonial.jpg', t:'Growth &amp; content strategy', d:'Audit, pillars, content mix and doctor activation.' },
+           { k:'Brand system', id:'bm-neob', img:'bm-nb-18.jpg', t:'Global brand system', d:'Visual identity and guidelines across markets and touchpoints.' },
+           { k:'Digital content', id:'digital', img:'sm-beauty.jpg', t:'Content ecosystem', d:'Social media, campaigns and educational content.' } ],
     more:['perfill','nad','expansion','congress','deck-company','deck-masterclass','deck-webinar'] },
   { id:'c-rt', label:'Real Tokn', name:'Real Tokn', years:'2023 — 2025', role:'Design &amp; Marketing Manager · Freelance', line:'Brand and launch campaigns for a real-estate investment platform.',
-    trio:[ { k:'Branding', id:'bm-realtokn', img:'img/bm-rt-1.jpg', t:'Brand manual', d:'Logo, colour, typography and applications.' },
-           { k:'Campaigns', id:'realtokn', img:'img/realtokn-cover.jpg', t:'Launch campaigns', d:'From social media to outdoor billboards.' },
-           { k:'Presentation', id:'deck-realtokn', img:'slides/rt-2.jpg', t:'Investment deck', d:'The story and numbers behind the platform.' } ] },
+    trio:[ { k:'Branding', id:'bm-realtokn', img:'bm-rt-1.jpg', t:'Brand manual', d:'Logo, colour, typography and applications.' },
+           { k:'Campaigns', id:'realtokn', img:'realtokn-cover.jpg', t:'Launch campaigns', d:'From social media to outdoor billboards.' },
+           { k:'Presentation', id:'deck-realtokn', img:'rt-2.jpg', t:'Investment deck', d:'The story and numbers behind the platform.' } ] },
   { id:'c-other', label:'Other', name:'Other work', years:'2016 — 2025', role:'Freelance &amp; university projects', line:'Brand identities, social media, video and product design.',
     more:['realestate','kebabs','foodstation','pentagono','movement','wanted','icff'] }
 ];
@@ -3075,7 +3075,7 @@ const COMPANIES = [
      "perfill",
      "hyboost"
     ],
-    "img": "img/pk-nad.jpg",
+    "img": "pk-nad.jpg",
     "role": "Packaging and brand design."
    },
    {
@@ -3087,7 +3087,7 @@ const COMPANIES = [
      "deck-masterclass",
      "deck-webinar"
     ],
-    "img": "img/brochure-1.jpg",
+    "img": "brochure-1.jpg",
     "role": "Sales decks, catalogues and brand guidelines."
    },
    {
@@ -3097,7 +3097,7 @@ const COMPANIES = [
      "digital",
      "neob-web"
     ],
-    "img": "img/sm-beauty.jpg",
+    "img": "sm-beauty.jpg",
     "role": "Content for social media and the company websites."
    },
    {
@@ -3106,7 +3106,7 @@ const COMPANIES = [
     "ids": [
      "congress"
     ],
-    "img": "slides/bod-1.jpg",
+    "img": "bod-1.jpg",
     "role": "Speaker presentation and event content."
    }
   ]
@@ -3125,7 +3125,7 @@ const COMPANIES = [
     "ids": [
      "fisherman"
     ],
-    "img": "img/fisherman-cover.jpg",
+    "img": "fisherman-cover.jpg",
     "role": "Brand development and marketing."
    },
    {
@@ -3143,7 +3143,7 @@ const COMPANIES = [
     "ids": [
      "fwm-radio"
     ],
-    "img": "vid/fwm-bw.jpg",
+    "img": "fwm-bw.jpg",
     "role": "Created and edited the content."
    },
    {
@@ -3152,7 +3152,7 @@ const COMPANIES = [
     "ids": [
      "fwm-realestate"
     ],
-    "img": "img/re-urban-1.jpg",
+    "img": "re-urban-1.jpg",
     "role": "Freelance, 2026: designed the printed sales material."
    }
   ]
@@ -3171,7 +3171,7 @@ const COMPANIES = [
     "ids": [
      "realtokn"
     ],
-    "img": "img/rt-logo.jpg",
+    "img": "rt-logo.jpg",
     "role": "Logo, brand manual, investor deck and social media."
    }
   ]
@@ -3232,10 +3232,10 @@ const discCards = (() => {
     web:'<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M7 6h.01M9.5 6h.01M8 21h8M12 18v3"/>'
   };
   const DWORK = [
-    ['realtokn','img/rt-logo.jpg','RealTokn logo','RealTokn · Fisherman WM · neo.b Labs','Branding','Brands built from zero, with the manuals and guidelines that keep them consistent. 4+ new brands launched at Fisherman WM.','brand',[['fisherman','Fisherman WM','New brands &amp; campaigns'],['realtokn','RealTokn','Brand from zero'],['bm-neob','neo.b Labs','Brand guidelines'],['kebabs','Kebabs','Brand identity']]],
-    ['nad','img/pk-nad.jpg','neo.b NAD box and vial','neo.b NAD · BioActive · Perfill','Product Design','Packaging that takes products to market: neo.b NAD, BioActive and Hyboost, plus the Perfill redesign.','product',[['nad','neo.b NAD','Launch packaging'],['bioactive','BioActive','Launch packaging'],['perfill','Perfill','Packaging redesign'],['hyboost','Hyboost','Packaging']]],
-    ['expansion','slides/co-5.jpg','neo.b Labs territories map','Distributors · Webinars · Events','Marketing Strategy','The materials behind distributor pitches, plus integrated campaigns, webinars and client events.','strategy',[['expansion','neo.b Labs','Sales &amp; distributor materials'],['fwm-events','Fisherman WM','Webinars &amp; client events'],['congress','EKAM Bodrum','Speaker deck &amp; event content']]],
-    ['digital','img/sm-beauty.jpg','neo.b Labs social media post','Social media · Websites · Decks','Graphic &amp; Web Design','Social media, websites and print that get noticed. 5+ inbound inquiries from social and web.','web',[['__h','Social media'],['digital','neo.b Labs','Social content'],['__s','Other'],['foodstation','Food Station','Social content'],['pentagono','Pentágono','Social content'],['realestate','Real estate','Video ads'],['movement','Movement','Poster campaign'],['__h','Website'],['neob-web','neo.b Labs','neoblab.com'],['__h','Print'],['fwm-realestate','Fisherman WM','Real estate brochures']]]
+    ['realtokn','rt-logo.jpg','RealTokn logo','RealTokn · Fisherman WM · neo.b Labs','Branding','Brands built from zero, with the manuals and guidelines that keep them consistent. 4+ new brands launched at Fisherman WM.','brand',[['fisherman','Fisherman WM','New brands &amp; campaigns'],['realtokn','RealTokn','Brand from zero'],['bm-neob','neo.b Labs','Brand guidelines'],['kebabs','Kebabs','Brand identity']]],
+    ['nad','pk-nad.jpg','neo.b NAD box and vial','neo.b NAD · BioActive · Perfill','Product Design','Packaging that takes products to market: neo.b NAD, BioActive and Hyboost, plus the Perfill redesign.','product',[['nad','neo.b NAD','Launch packaging'],['bioactive','BioActive','Launch packaging'],['perfill','Perfill','Packaging redesign'],['hyboost','Hyboost','Packaging']]],
+    ['expansion','co-5.jpg','neo.b Labs territories map','Distributors · Webinars · Events','Marketing Strategy','The materials behind distributor pitches, plus integrated campaigns, webinars and client events.','strategy',[['expansion','neo.b Labs','Sales &amp; distributor materials'],['fwm-events','Fisherman WM','Webinars &amp; client events'],['congress','EKAM Bodrum','Speaker deck &amp; event content']]],
+    ['digital','sm-beauty.jpg','neo.b Labs social media post','Social media · Websites · Decks','Graphic &amp; Web Design','Social media, websites and print that get noticed. 5+ inbound inquiries from social and web.','web',[['__h','Social media'],['digital','neo.b Labs','Social content'],['__s','Other'],['foodstation','Food Station','Social content'],['pentagono','Pentágono','Social content'],['realestate','Real estate','Video ads'],['movement','Movement','Poster campaign'],['__h','Website'],['neob-web','neo.b Labs','neoblab.com'],['__h','Print'],['fwm-realestate','Fisherman WM','Real estate brochures']]]
   ];
   DISC_DATA = DWORK; DISC_IC = IC2;
   return () => `<div class="rh-acc rh-cards" data-acc>${DWORK.map(([id,img,alt,tg,t,r,ic,pl],k)=>`<div class="rh-p${pl.length>5?' long':''}" role="group" tabindex="0" aria-label="${t.replace('&amp;','&')}" data-k="${k}" data-dk="${DKEYS[k]}" data-href="#disc-${DKEYS[k]}" aria-expanded="false"><span class="num" aria-hidden="true">${String(k+1).padStart(2,'0')}.</span><span class="ph"><img src="${img}" alt="${alt}" loading="lazy"></span><span class="ft"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${IC2[ic]}</svg></span><strong>${t}</strong><span class="rs">${r}</span><span class="pl">${pl.map(([pid,co,what])=>pid==='__h'?`<em class="plh">${co}</em>`:pid==='__s'?`<em class="pls">${co}</em>`:`<a href="#case-${pid}"><b>${co}</b><span>${what}</span>${AR}</a>`).join('')}</span><a class="pl-all" href="#disc-${DKEYS[k]}">See all projects ${AR}</a></span></div>`).join('')}</div>`;
@@ -3311,7 +3311,7 @@ function companyCase(p, hit){
   const brief = p.brief || [p.context, p.challenge].filter(Boolean).join(' ');
   const did = p.did || [p.role, p.solution].filter(Boolean);
   const PH = x => `<span class="ph-box">${x}</span>`;
-  const gal = (p.gallery || []).map(([src,alt,v])=>(v === 'v' || src.endsWith('.mp4')) ? `<figure class="is-video" data-src="${src}"><video src="${src}"${/^(img|vid)\//.test(src) ? ` poster="${src.replace('.mp4','.jpg')}"` : ''} controls muted playsinline preload="${/^(img|vid)\//.test(src) ? 'none' : 'metadata'}" aria-label="${alt}"></video></figure>` : `<figure data-src="${src}"><img src="${src}" alt="${alt}" loading="lazy"></figure>`);
+  const gal = (p.gallery || []).map(([src,alt,v])=>(v === 'v' || src.endsWith('.mp4')) ? `<figure class="is-video" data-src="${src}"><video src="${src}"${!/^(https?:|blob:|\/_blob)/.test(src) ? ` poster="${src.replace('.mp4','.jpg')}"` : ''} controls muted playsinline preload="${!/^(https?:|blob:|\/_blob)/.test(src) ? 'none' : 'metadata'}" aria-label="${alt}"></video></figure>` : `<figure data-src="${src}"><img src="${src}" alt="${alt}" loading="lazy"></figure>`);
   if (p.ph && p.img && !p._noPh) gal.push(`<figure class="ph-fig">${PH(p.ph)}</figure>`);
   const xd = p._xdid || [];
   return `
@@ -3394,9 +3394,9 @@ function discSection(d, i, g){
 let pendingJump = null;
 function jumpTo(id){ const el = document.getElementById('d-'+id) || document.getElementById('d-'+(SEC2GRP[id]||'')); if (el) el.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'}); }
 const CATS = [
-  { f:'packaging', title:'Packaging', img:'img/pk-hyboost.jpg', alt:'Hyboost box and vial', text:'Boxes, vials, labels and catalogues for a medical-aesthetics range.' },
-  { f:'social', title:'Digital marketing', img:'img/sm-beauty.jpg', alt:'neo.b Labs social media post', text:'Social media, content and campaigns for doctors, patients and consumers.' },
-  { f:'branding', title:'Brand identity', img:'img/kebabs-cover.jpg', alt:'Kebabs brand identity', text:'Logos, visual systems and launch campaigns, from strategy to street.' }
+  { f:'packaging', title:'Packaging', img:'pk-hyboost.jpg', alt:'Hyboost box and vial', text:'Boxes, vials, labels and catalogues for a medical-aesthetics range.' },
+  { f:'social', title:'Digital marketing', img:'sm-beauty.jpg', alt:'neo.b Labs social media post', text:'Social media, content and campaigns for doctors, patients and consumers.' },
+  { f:'branding', title:'Brand identity', img:'kebabs-cover.jpg', alt:'Kebabs brand identity', text:'Logos, visual systems and launch campaigns, from strategy to street.' }
 ];
 function catCard(c, i){
   const sec = SECTIONS.find(x=>x.id===c.f); const n = (sec.items||sec.videos).length;
@@ -3593,7 +3593,7 @@ experience: () => `
     <div class="wrap">
       <div class="xbento">
         <div class="xb xb-hero"><span class="xb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><span class="num" style="font-size:clamp(44px,5.2vw,76px)">2015</span><p>In marketing, brand and design since</p></div>
-        <figure class="xb xb-img"><img src="vid/neob-recap.jpg" alt="neo.b Labs event recap" loading="lazy"></figure>
+        <figure class="xb xb-img"><img src="neob-recap.jpg" alt="neo.b Labs event recap" loading="lazy"></figure>
         <div class="xb xb-pale"><span class="xb-w">Brand management</span><p>New brands, and the brands already in market</p><span class="xb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5-8 4.5-8-4.5z"/><path d="M4 12l8 4.5 8-4.5"/><path d="M4 16.5L12 21l8-4.5"/></svg></span></div>
         <div class="xb"><span class="xb-w">Packaging</span><p>Packaging design for product launches</p><span class="xb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span></div>
         <div class="xb"><span class="xb-w">Digital</span><p>Social media content and websites</p><span class="xb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 18.5h3"/></svg></span></div>
@@ -4146,9 +4146,9 @@ run(['header','main','footer'].map(s => document.querySelector(s)).filter(Boolea
 @media (max-width:760px){ .rh-cards.rh-acc .rh-p.long[aria-expanded="true"] .ph{height:150px} .rh-cards.rh-acc .rh-p.long[aria-expanded="true"]{padding-top:150px} }
 </style>
 <style>
-.cs2-hero img[src^="img/web-"]{object-fit:contain!important;background:#F3F4F9}
-.cs2-hero img[src^="slides/bod-"]{object-fit:contain!important;background:#F3F4F9}
-.gallery img[src^="img/web-"]{object-fit:contain;background:#F3F4F9}
+.cs2-hero img[src^="web-"]{object-fit:contain!important;background:#F3F4F9}
+.cs2-hero img[src^="bod-"]{object-fit:contain!important;background:#F3F4F9}
+.gallery img[src^="web-"]{object-fit:contain;background:#F3F4F9}
 </style>
 <style>
 .pj-disc{padding-block:clamp(28px,4vw,56px) clamp(36px,5vw,72px)!important}
